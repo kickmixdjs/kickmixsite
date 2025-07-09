@@ -1,135 +1,181 @@
+GitHub Repository Update
+You only need one file for the new version of your website.
+
+1. File Content: index.html
+This is the complete code for your new website. Copy all of the code inside the box below.
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Kick-Mix Productions: Event technology, custom fabrication, drone services, and more in Anaheim, CA.">
-  <meta name="keywords" content="event production, drones, fabrication, Anaheim, tech services">
-  <title>Kick-Mix Productions</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap">
-  <link rel="icon" href="logo2.png" type="image/png"> <!-- Using logo as favicon for simplicity -->
+  <meta name="keywords" content="event production, drones, fabrication, Anaheim, tech services, lighting, audio, props">
+  <title>Kick-Mix Productions | Next-Gen Event & Fab Services</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom Favicon (SVG) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%2338bdf8' d='M50 0L95 25V75L50 100L5 75V25L50 0Z'/%3E%3Cpath fill='%230f172a' d='M50 10L87 30V70L50 90L13 70V30L50 10Z'/%3E%3Ctext x='50' y='62' font-size='40' font-family='monospace' fill='%23e2e8f0' text-anchor='middle' font-weight='bold'%3EKM%3C/text%3E%3C/svg%3E">
+
   <style>
+    /* Applying the custom font to the body */
     body {
-      margin: 0;
       font-family: 'Roboto Mono', monospace;
-      background-color: #0f1113;
-      color: #e2e8f0;
-      line-height: 1.6;
-      padding: 2rem;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    header img {
-      max-width: 150px;
-    }
-    h1 {
-      font-size: 2.5rem;
-      color: #38bdf8;
-      margin-bottom: 0.5rem;
-    }
-    p.subtitle {
-      color: #94a3b8;
-      font-size: 1.1rem;
-      margin: 0.25rem 0;
-    }
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-    a:hover {
-      color: #a855f7;
-    }
-    section {
-      max-width: 800px;
-      margin: 0 auto 3rem;
-      padding: 1rem;
-    }
-    h2 {
-      font-size: 1.5rem;
-      color: #38bdf8;
-      margin-bottom: 1rem;
-    }
-    ul {
-      padding-left: 1.5rem;
-    }
-    li {
-      margin-bottom: 0.5rem;
-    }
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #64748b;
-      padding: 2rem 0;
-    }
-    @media (max-width: 600px) {
-      h1 { font-size: 1.8rem; }
-      header img { max-width: 100px; }
     }
   </style>
 </head>
-<body>
-  <header>
-    <img src="logo2.png" alt="Kick-Mix Logo">
-    <h1>Kick-Mix Productions</h1>
-    <p class="subtitle">Next-Generation Event, Fabrication, and Aerial Services</p>
-    <p class="subtitle">Anaheim, California | <a href="mailto:chris@kick-mix.com">chris@kick-mix.com</a></p>
-  </header>
+<body class="bg-slate-900 text-slate-300 antialiased">
 
-  <section>
-    <h2>⚙️ Event Technology & Production</h2>
-    <ul>
-      <li>Audio Systems for concerts and experiences</li>
-      <li>Lighting Design: pixel-mapped, intelligent, DMX-ready</li>
-      <li>Video Projection, LED walls, and immersive visuals</li>
-    </ul>
-  </section>
+  <!-- Main Container -->
+  <div class="container mx-auto px-4 py-8 md:py-16">
 
-  <section>
-    <h2>🛠️ Custom Props & Fabrication</h2>
-    <ul>
-      <li>Props and robotics for film, concerts, and installations</li>
-      <li>Animatronics and moving set pieces</li>
-      <li>In-house shop: CNC, laser cutter, 3D print farm, and electronics</li>
-    </ul>
-  </section>
+    <!-- Header Section -->
+    <header class="text-center mb-16">
+      <!-- SVG Logo -->
+      <div class="inline-block mb-6">
+        <svg class="w-24 h-24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#logoGradient)" d="M50,0C22.4,0,0,22.4,0,50s22.4,50,50,50s50-22.4,50-50S77.6,0,50,0z M50,88.2 c-21.1,0-38.2-17.1-38.2-38.2S28.9,11.8,50,11.8s38.2,17.1,38.2,38.2S71.1,88.2,50,88.2z"/>
+          <path fill="#e2e8f0" d="M42.3,62.5V37.5h7.1v10.8l10.1-10.8h8.8L56.9,49.8l12.1,12.7h-9.2L50,52.4l-7.7,10.1H42.3z"/>
+        </svg>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-purple-500 mb-2">
+        Kick-Mix Productions
+      </h1>
+      <p class="text-slate-400 text-lg md:text-xl mb-1">Next-Generation Event, Fabrication, and Aerial Services</p>
+      <p class="text-slate-500">
+        Anaheim, California | <a href="mailto:chris@kick-mix.com" class="text-sky-400 hover:text-purple-400 transition-colors duration-300">chris@kick-mix.com</a>
+      </p>
+    </header>
 
-  <section>
-    <h2>🚁 Drone Services & Aerial Tech</h2>
-    <ul>
-      <li>FAA-certified pilot-operated drone photography</li>
-      <li>Custom drones for industrial inspection: power lines, transformers, rooftops</li>
-    </ul>
-  </section>
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-  <section>
-    <h2>📸 Interactive Rentals</h2>
-    <ul>
-      <li>Photo booths for events and activations</li>
-      <li>Custom-built arcade machines themed for your brand</li>
-    </ul>
-  </section>
+      <!-- Card 1: Event Tech -->
+      <div class="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700 shadow-lg hover:shadow-sky-500/10 transition-shadow duration-300">
+        <div class="flex items-center mb-4">
+          <svg class="w-8 h-8 text-sky-400 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+          <h2 class="text-xl font-bold text-slate-100">Event Technology</h2>
+        </div>
+        <ul class="list-disc list-inside text-slate-400 space-y-2">
+          <li>Audio Systems for concerts and experiences</li>
+          <li>Pixel-mapped, intelligent, DMX-ready lighting</li>
+          <li>Video Projection, LED walls, and immersive visuals</li>
+        </ul>
+      </div>
 
-  <section>
-    <h2>🌍 Importing & Global Logistics</h2>
-    <ul>
-      <li>Product sourcing and factory coordination</li>
-      <li>Freight and logistics solutions for startups and brands</li>
-    </ul>
-  </section>
+      <!-- Card 2: Fabrication -->
+      <div class="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700 shadow-lg hover:shadow-sky-500/10 transition-shadow duration-300">
+        <div class="flex items-center mb-4">
+          <svg class="w-8 h-8 text-sky-400 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+          <h2 class="text-xl font-bold text-slate-100">Custom Fabrication</h2>
+        </div>
+        <ul class="list-disc list-inside text-slate-400 space-y-2">
+          <li>Props and robotics for film, concerts, and installations</li>
+          <li>Animatronics and moving set pieces</li>
+          <li>In-house: CNC, laser, 3D print farm, electronics</li>
+        </ul>
+      </div>
 
-  <section>
-    <h2>🤝 Why Clients Trust Us</h2>
-    <ul>
-      <li>We’re engineers, makers, and production pros</li>
-      <li>Fast turnaround, high-quality results</li>
-      <li>Trusted by studios, energy clients, and tech startups</li>
-    </ul>
-  </section>
+      <!-- Card 3: Drones -->
+      <div class="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700 shadow-lg hover:shadow-sky-500/10 transition-shadow duration-300">
+        <div class="flex items-center mb-4">
+          <svg class="w-8 h-8 text-sky-400 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path><path d="M20 7l-1.41-1.41c-.38-.38-.89-.59-1.42-.59H6.83c-.53 0-1.04.21-1.42.59L4 7H2v2h2v10h16V9h2V7h-2zm-2 10H6V9h12v8z"></path><path d="M5 12h2v2H5zm12 0h2v2h-2z" opacity=".3"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-1.414-1.414M5.636 5.636L4.222 4.222m15.556 11.314L18.364 18.364m-12.728 0l-1.414 1.414M12 21V19m0-16V3m9 9h2m-18 0H3"></path></svg>
+          <h2 class="text-xl font-bold text-slate-100">Drone Services</h2>
+        </div>
+        <ul class="list-disc list-inside text-slate-400 space-y-2">
+          <li>FAA-certified pilot for aerial photography</li>
+          <li>Custom drones for industrial inspection</li>
+          <li>Power lines, transformers, and rooftops</li>
+        </ul>
+      </div>
 
-  <footer>
-    © 2025 Kick-Mix Productions — All Rights Reserved
-  </footer>
+      <!-- Card 4: Rentals -->
+      <div class="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700 shadow-lg hover:shadow-sky-500/10 transition-shadow duration-300">
+        <div class="flex items-center mb-4">
+          <svg class="w-8 h-8 text-sky-400 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <h2 class="text-xl font-bold text-slate-100">Interactive Rentals</h2>
+        </div>
+        <ul class="list-disc list-inside text-slate-400 space-y-2">
+          <li>High-quality photo booths for events & activations</li>
+          <li>Custom-built arcade machines for your brand</li>
+          <li>Engaging experiences for guests and customers</li>
+        </ul>
+      </div>
+      
+      <!-- Card 5: Importing -->
+      <div class="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700 shadow-lg hover:shadow-sky-500/10 transition-shadow duration-300">
+        <div class="flex items-center mb-4">
+          <svg class="w-8 h-8 text-sky-400 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h10a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.721 19h8.558M12 15.25V4.75m0 10.5l-2.25-2.25M12 15.25l2.25-2.25"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          <h2 class="text-xl font-bold text-slate-100">Global Logistics</h2>
+        </div>
+        <ul class="list-disc list-inside text-slate-400 space-y-2">
+          <li>Product sourcing and factory coordination</li>
+          <li>End-to-end freight and logistics solutions</li>
+          <li>Helping startups and brands import with ease</li>
+        </ul>
+      </div>
+
+      <!-- Card 6: Why Us -->
+      <div class="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700 shadow-lg hover:shadow-sky-500/10 transition-shadow duration-300">
+        <div class="flex items-center mb-4">
+          <svg class="w-8 h-8 text-sky-400 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+          <h2 class="text-xl font-bold text-slate-100">Why Clients Trust Us</h2>
+        </div>
+        <ul class="list-disc list-inside text-slate-400 space-y-2">
+          <li>We’re engineers, makers, and production pros</li>
+          <li>Fast turnaround, high-quality results</li>
+          <li>Trusted by studios, energy clients, and tech startups</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="text-center text-slate-500 mt-16">
+      <p>© 2025 Kick-Mix Productions — All Rights Reserved</p>
+    </footer>
+
+  </div>
+
 </body>
 </html>
+
+2. Instructions to Update GitHub
+The easiest way to do this is directly on the GitHub website.
+
+Go to your GitHub Repository: Open your web browser and navigate to your repository's main page.
+
+Find your old HTML file: Look for your existing HTML file in the file list. It's probably named index.html or something similar. Click on it.
+
+Click the Edit Icon: On the file view page, look for a small pencil icon in the top-right corner of the file content area. Click it to edit the file.
+
+Replace the Code:
+
+Select all the text currently in the editor (Ctrl+A or Cmd+A).
+
+Delete it.
+
+Paste the new code you copied from the index.html section above.
+
+Commit Changes:
+
+Scroll down to the bottom of the page to the "Commit changes" section.
+
+In the first text box, you can type a short summary, like: Update website to new design.
+
+Click the green "Commit changes" button.
+
+That's it! Your repository will be updated. If you are using GitHub Pages, the changes should be live on your website within a few minutes.
