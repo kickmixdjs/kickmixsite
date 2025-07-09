@@ -7,49 +7,26 @@
   <meta name="keywords" content="event production, drones, fabrication, Anaheim, tech services">
   <title>Kick-Mix Productions</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap">
-  <link rel="icon" href="assets/favicon.ico">
+  <link rel="icon" href="logo2.png" type="image/png"> <!-- Using logo as favicon for simplicity -->
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
       margin: 0;
       font-family: 'Roboto Mono', monospace;
-      background: linear-gradient(135deg, #0f1113, #1e252d);
+      background-color: #0f1113;
       color: #e2e8f0;
       line-height: 1.6;
       padding: 2rem;
-      position: relative;
-      overflow-x: hidden;
-    }
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('assets/circuit-bg.png') repeat;
-      opacity: 0.05;
-      z-index: -1;
     }
     header {
       text-align: center;
-      margin-bottom: 3rem;
-      animation: fadeIn 1s ease-in;
+      margin-bottom: 2rem;
     }
     header img {
       max-width: 150px;
-      transition: transform 0.3s ease, filter 0.3s ease;
-    }
-    header img:hover {
-      transform: scale(1.1);
-      filter: drop-shadow(0 0 10px #38bdf8);
     }
     h1 {
       font-size: 2.5rem;
       color: #38bdf8;
-      text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
       margin-bottom: 0.5rem;
     }
     p.subtitle {
@@ -60,67 +37,34 @@
     a {
       color: #38bdf8;
       text-decoration: none;
-      transition: color 0.3s;
     }
     a:hover {
       color: #a855f7;
     }
     section {
-      max-width: 900px;
-      margin: 0 auto 4rem;
-      background: rgba(15, 17, 19, 0.8);
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
-      transition: transform 0.3s ease;
-    }
-    section:hover {
-      transform: translateY(-5px);
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      padding: 1rem;
     }
     h2 {
       font-size: 1.5rem;
       color: #38bdf8;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
       margin-bottom: 1rem;
-      border-bottom: 2px solid #334155;
-      padding-bottom: 0.5rem;
-    }
-    h2 svg {
-      width: 24px;
-      height: 24px;
-      fill: #38bdf8;
     }
     ul {
       padding-left: 1.5rem;
-      list-style: none;
     }
     li {
-      margin-bottom: 0.75rem;
-      position: relative;
-      padding-left: 1.5rem;
-    }
-    li::before {
-      content: '>>';
-      color: #a855f7;
-      position: absolute;
-      left: 0;
+      margin-bottom: 0.5rem;
     }
     footer {
       text-align: center;
       font-size: 0.9rem;
       color: #64748b;
       padding: 2rem 0;
-      border-top: 1px solid #334155;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
     @media (max-width: 600px) {
       h1 { font-size: 1.8rem; }
-      section { padding: 1.5rem; }
       header img { max-width: 100px; }
     }
   </style>
@@ -134,10 +78,7 @@
   </header>
 
   <section>
-    <h2>
-      <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4l-5 5H3z"/></svg>
-      Event Technology & Production
-    </h2>
+    <h2>⚙️ Event Technology & Production</h2>
     <ul>
       <li>Audio Systems for concerts and experiences</li>
       <li>Lighting Design: pixel-mapped, intelligent, DMX-ready</li>
@@ -146,10 +87,7 @@
   </section>
 
   <section>
-    <h2>
-      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-10 10h4v-4h12v4h4a10 10 0 00-10-10z"/></svg>
-      Custom Props & Fabrication
-    </h2>
+    <h2>🛠️ Custom Props & Fabrication</h2>
     <ul>
       <li>Props and robotics for film, concerts, and installations</li>
       <li>Animatronics and moving set pieces</li>
@@ -158,10 +96,7 @@
   </section>
 
   <section>
-    <h2>
-      <svg viewBox="0 0 24 24"><path d="M18 2l4 4-4 4m-4-4l-4 4 4 4m-8-8l-4 4 4 4"/></svg>
-      Drone Services & Aerial Tech
-    </h2>
+    <h2>🚁 Drone Services & Aerial Tech</h2>
     <ul>
       <li>FAA-certified pilot-operated drone photography</li>
       <li>Custom drones for industrial inspection: power lines, transformers, rooftops</li>
@@ -169,10 +104,7 @@
   </section>
 
   <section>
-    <h2>
-      <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
-      Interactive Rentals
-    </h2>
+    <h2>📸 Interactive Rentals</h2>
     <ul>
       <li>Photo booths for events and activations</li>
       <li>Custom-built arcade machines themed for your brand</li>
@@ -180,10 +112,7 @@
   </section>
 
   <section>
-    <h2>
-      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
-      Importing & Global Logistics
-    </h2>
+    <h2>🌍 Importing & Global Logistics</h2>
     <ul>
       <li>Product sourcing and factory coordination</li>
       <li>Freight and logistics solutions for startups and brands</li>
@@ -191,10 +120,7 @@
   </section>
 
   <section>
-    <h2>
-      <svg viewBox="0 0 24 24"><path d="M12 3v18m9-9H3"/></svg>
-      Why Clients Trust Us
-    </h2>
+    <h2>🤝 Why Clients Trust Us</h2>
     <ul>
       <li>We’re engineers, makers, and production pros</li>
       <li>Fast turnaround, high-quality results</li>
