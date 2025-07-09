@@ -1,149 +1,258 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kick-Mix Productions: Event technology, custom fabrication, drone services, and more in Anaheim, CA.">
-  <meta name="keywords" content="event production, drones, fabrication, Anaheim, tech services, lighting, audio, props">
-  <title>Kick-Mix Productions | Next-Gen Event & Fab Services</title>
-  
+  <meta name="description" content="Kick-Mix Productions: Full-scale event production, custom fabrication, drone services, and experiential marketing solutions based in Anaheim, CA.">
+  <meta name="keywords" content="event production, custom props, drone services, Anaheim, fabrication, trade show booths, event lighting, event audio, experiential marketing, logistics">
+  <title>Kick-Mix Productions | Professional Event & Fabrication Solutions</title>
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <!-- Custom Favicon (SVG) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%2338bdf8' d='M50 0L95 25V75L50 100L5 75V25L50 0Z'/%3E%3Cpath fill='%230f172a' d='M50 10L87 30V70L50 90L13 70V30L50 10Z'/%3E%3Ctext x='50' y='62' font-size='40' font-family='monospace' fill='%23e2e8f0' text-anchor='middle' font-weight='bold'%3EKM%3C/text%3E%3C/svg%3E">
 
   <style>
-    /* Applying the custom font to the body */
     body {
+      font-family: 'Inter', sans-serif;
+      background-color: #020617; /* Even darker slate */
+    }
+    .font-roboto-mono {
       font-family: 'Roboto Mono', monospace;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #38bdf8, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .tab-active {
+      background-color: #38bdf8;
+      color: #020617;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+    .client-logo {
+      transition: all 0.3s ease;
+      filter: grayscale(100%) brightness(1.5) contrast(1.2);
+       opacity: 0.7;
+    }
+    .client-logo:hover {
+      filter: grayscale(0%) brightness(1) contrast(1);
+      transform: scale(1.1);
+      opacity: 1;
     }
   </style>
 </head>
-<body class="bg-slate-900 text-slate-300 antialiased">
+<body class="text-slate-300 antialiased">
 
-  <!-- Main Container -->
-  <div class="container mx-auto px-4 py-8 md:py-16">
-
-    <!-- Header Section -->
-    <header class="text-center mb-16">
-      <!-- SVG Logo -->
-      <div class="inline-block mb-6">
-        <svg class="w-24 h-24" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#38bdf8;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1" />
-            </linearGradient>
-          </defs>
-          <path fill="url(#logoGradient)" d="M50,0C22.4,0,0,22.4,0,50s22.4,50,50,50s50-22.4,50-50S77.6,0,50,0z M50,88.2 c-21.1,0-38.2-17.1-38.2-38.2S28.9,11.8,50,11.8s38.2,17.1,38.2,38.2S71.1,88.2,50,88.2z"/>
-          <path fill="#e2e8f0" d="M42.3,62.5V37.5h7.1v10.8l10.1-10.8h8.8L56.9,49.8l12.1,12.7h-9.2L50,52.4l-7.7,10.1H42.3z"/>
-        </svg>
-      </div>
-      <h1 class="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-purple-500 mb-2">
-        Kick-Mix Productions
-      </h1>
-      <p class="text-slate-400 text-lg md:text-xl mb-1">Next-Generation Event, Fabrication, and Aerial Services</p>
-      <p class="text-slate-500">
-        Anaheim, California | <a href="mailto:chris@kick-mix.com" class="text-sky-400 hover:text-purple-400 transition-colors duration-300">chris@kick-mix.com</a>
-      </p>
-    </header>
-
-    <!-- Services Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <!-- Card 1: Event Tech -->
-      <div class="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700 shadow-lg hover:shadow-sky-500/10 transition-shadow duration-300">
-        <div class="flex items-center mb-4">
-          <svg class="w-8 h-8 text-sky-400 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
-          <h2 class="text-xl font-bold text-slate-100">Event Technology</h2>
-        </div>
-        <ul class="list-disc list-inside text-slate-400 space-y-2">
-          <li>Audio Systems for concerts and experiences</li>
-          <li>Pixel-mapped, intelligent, DMX-ready lighting</li>
-          <li>Video Projection, LED walls, and immersive visuals</li>
-        </ul>
-      </div>
-
-      <!-- Card 2: Fabrication -->
-      <div class="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700 shadow-lg hover:shadow-sky-500/10 transition-shadow duration-300">
-        <div class="flex items-center mb-4">
-          <svg class="w-8 h-8 text-sky-400 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
-          <h2 class="text-xl font-bold text-slate-100">Custom Fabrication</h2>
-        </div>
-        <ul class="list-disc list-inside text-slate-400 space-y-2">
-          <li>Props and robotics for film, concerts, and installations</li>
-          <li>Animatronics and moving set pieces</li>
-          <li>In-house: CNC, laser, 3D print farm, electronics</li>
-        </ul>
-      </div>
-
-      <!-- Card 3: Drones -->
-      <div class="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700 shadow-lg hover:shadow-sky-500/10 transition-shadow duration-300">
-        <div class="flex items-center mb-4">
-          <svg class="w-8 h-8 text-sky-400 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path><path d="M20 7l-1.41-1.41c-.38-.38-.89-.59-1.42-.59H6.83c-.53 0-1.04.21-1.42.59L4 7H2v2h2v10h16V9h2V7h-2zm-2 10H6V9h12v8z"></path><path d="M5 12h2v2H5zm12 0h2v2h-2z" opacity=".3"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-1.414-1.414M5.636 5.636L4.222 4.222m15.556 11.314L18.364 18.364m-12.728 0l-1.414 1.414M12 21V19m0-16V3m9 9h2m-18 0H3"></path></svg>
-          <h2 class="text-xl font-bold text-slate-100">Drone Services</h2>
-        </div>
-        <ul class="list-disc list-inside text-slate-400 space-y-2">
-          <li>FAA-certified pilot for aerial photography</li>
-          <li>Custom drones for industrial inspection</li>
-          <li>Power lines, transformers, and rooftops</li>
-        </ul>
-      </div>
-
-      <!-- Card 4: Rentals -->
-      <div class="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700 shadow-lg hover:shadow-sky-500/10 transition-shadow duration-300">
-        <div class="flex items-center mb-4">
-          <svg class="w-8 h-8 text-sky-400 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-          <h2 class="text-xl font-bold text-slate-100">Interactive Rentals</h2>
-        </div>
-        <ul class="list-disc list-inside text-slate-400 space-y-2">
-          <li>High-quality photo booths for events & activations</li>
-          <li>Custom-built arcade machines for your brand</li>
-          <li>Engaging experiences for guests and customers</li>
-        </ul>
-      </div>
-      
-      <!-- Card 5: Importing -->
-      <div class="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700 shadow-lg hover:shadow-sky-500/10 transition-shadow duration-300">
-        <div class="flex items-center mb-4">
-          <svg class="w-8 h-8 text-sky-400 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2h10a2 2 0 002-2v-1a2 2 0 012-2h1.945M7.721 19h8.558M12 15.25V4.75m0 10.5l-2.25-2.25M12 15.25l2.25-2.25"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-          <h2 class="text-xl font-bold text-slate-100">Global Logistics</h2>
-        </div>
-        <ul class="list-disc list-inside text-slate-400 space-y-2">
-          <li>Product sourcing and factory coordination</li>
-          <li>End-to-end freight and logistics solutions</li>
-          <li>Helping startups and brands import with ease</li>
-        </ul>
-      </div>
-
-      <!-- Card 6: Why Us -->
-      <div class="bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg border border-slate-700 shadow-lg hover:shadow-sky-500/10 transition-shadow duration-300">
-        <div class="flex items-center mb-4">
-          <svg class="w-8 h-8 text-sky-400 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-          <h2 class="text-xl font-bold text-slate-100">Why Clients Trust Us</h2>
-        </div>
-        <ul class="list-disc list-inside text-slate-400 space-y-2">
-          <li>We’re engineers, makers, and production pros</li>
-          <li>Fast turnaround, high-quality results</li>
-          <li>Trusted by studios, energy clients, and tech startups</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <!-- Footer Section -->
-    <footer class="text-center text-slate-500 mt-16">
-      <p>© 2025 Kick-Mix Productions — All Rights Reserved</p>
-    </footer>
-
+  <!-- Background Elements -->
+  <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+    <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+    <div class="absolute top-0 -right-4 w-72 h-72 bg-sky-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
   </div>
+
+  <!-- Header & Nav -->
+  <header id="header" class="fixed top-0 left-0 right-0 bg-slate-900/80 backdrop-blur-lg border-b border-slate-800 z-50">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <a href="#" class="text-lg md:text-xl font-bold gradient-text font-roboto-mono">Kick-Mix Productions</a>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#services" class="text-slate-300 hover:text-sky-400 transition-colors">Services</a>
+        <a href="#process" class="text-slate-300 hover:text-sky-400 transition-colors">Process</a>
+        <a href="#clients" class="text-slate-300 hover:text-sky-400 transition-colors">Clients</a>
+        <a href="#contact" class="text-slate-300 hover:text-sky-400 transition-colors">Contact</a>
+      </nav>
+      <a href="#contact" class="hidden md:block bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">Get a Quote</a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-24">
+
+    <!-- Hero Section -->
+    <section id="hero" class="container mx-auto px-6 py-16 md:py-32 text-center">
+      <h1 class="text-4xl md:text-6xl font-black text-slate-100 mb-4">
+        We Build <span class="gradient-text">Impossible</span> Things.
+      </h1>
+      <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-8">
+        A full-scale production company and experiential event agency. Since 1998, we've served our partners with the highest standards in audio, video, lighting, and fabrication.
+      </p>
+      <a href="#services" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform hover:scale-105">Explore Our Capabilities</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container mx-auto px-6 py-20">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-100">Our Services</h2>
+        <p class="text-slate-400 mt-2">Click a tab to see how we can help bring your vision to life.</p>
+      </div>
+      <div class="max-w-5xl mx-auto">
+        <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-8" id="service-tabs">
+          <button data-tab="event-prod" class="tab tab-active font-semibold py-2 px-4 rounded-lg transition-all">Event Production</button>
+          <button data-tab="fabrication" class="tab font-semibold py-2 px-4 rounded-lg transition-all text-slate-300 hover:bg-slate-700">Custom Fabrication</button>
+          <button data-tab="drones" class="tab font-semibold py-2 px-4 rounded-lg transition-all text-slate-300 hover:bg-slate-700">Drone Services</button>
+          <button data-tab="rentals" class="tab font-semibold py-2 px-4 rounded-lg transition-all text-slate-300 hover:bg-slate-700">Interactive Rentals</button>
+          <button data-tab="logistics" class="tab font-semibold py-2 px-4 rounded-lg transition-all text-slate-300 hover:bg-slate-700">Importing & Logistics</button>
+        </div>
+        <div id="service-content" class="bg-slate-800/50 p-6 md:p-8 rounded-xl border border-slate-700 shadow-2xl min-h-[400px]"></div>
+      </div>
+    </section>
+    
+    <!-- Our Process Section -->
+    <section id="process" class="container mx-auto px-6 py-20">
+       <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-100">Our Creative Process</h2>
+        <p class="text-slate-400 mt-2">A proven, collaborative workflow to ensure your vision is realized perfectly.</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700"><h3 class="text-xl font-bold text-sky-400 mb-2">1. Creative Briefing</h3><p class="text-slate-400">We meet to discuss your vision, goals, budget, and timeline, creating a project portfolio to guide the process.</p></div>
+          <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700"><h3 class="text-xl font-bold text-sky-400 mb-2">2. Brainstorming</h3><p class="text-slate-400">Our team reviews the portfolio and renders numerous creative solutions for all project particulars.</p></div>
+          <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700"><h3 class="text-xl font-bold text-sky-400 mb-2">3. Concept Presentation</h3><p class="text-slate-400">Initial concepts are presented to you for discussion and feedback.</p></div>
+          <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700"><h3 class="text-xl font-bold text-sky-400 mb-2">4. Revision</h3><p class="text-slate-400">Client-approved ideas are evaluated and revised according to budget, time, and brand expectations.</p></div>
+          <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700"><h3 class="text-xl font-bold text-sky-400 mb-2">5. Final Concept</h3><p class="text-slate-400">The polished concept is presented one last time for final approval.</p></div>
+          <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700"><h3 class="text-xl font-bold text-sky-400 mb-2">6. Execution</h3><p class="text-slate-400">Our build team takes over, fabricating and setting up the project to the exact agreed-upon specifications.</p></div>
+      </div>
+    </section>
+
+    <!-- Client Showcase Section -->
+    <section id="clients" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-100">Trusted By The Best</h2>
+                <p class="text-slate-400 mt-2">We're proud to have partnered with world-class brands and organizations.</p>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-6 md:gap-x-12">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="h-10 md:h-12 client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney_logo_black.svg" alt="Disney" class="h-10 md:h-12 client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Volkswagen_logo_2019.svg" alt="Volkswagen" class="h-10 md:h-12 client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/AT%26T_logo_2016.svg" alt="AT&T" class="h-8 md:h-10 client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/T-Mobile_logo_2022.svg" alt="T-Mobile" class="h-10 md:h-12 client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Rockstar_Energy_Drink_logo.svg" alt="Rockstar Energy" class="h-10 md:h-12 client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.svg" alt="Uber" class="h-8 md:h-10 client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Samsung_Logo.svg" alt="Samsung" class="h-10 md:h-12 client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Sony_logo.svg" alt="Sony" class="h-8 md:h-10 client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="NASA" class="h-8 md:h-10 client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg" alt="Tesla" class="h-8 md:h-10 client-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" class="h-8 md:h-10 client-logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto px-6 py-20">
+      <div class="bg-slate-800/50 rounded-xl border border-slate-700 p-8 md:p-12 max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-slate-100 mb-3">Have a Project in Mind?</h2>
+        <p class="text-slate-400 mb-6">Let's talk about how we can make it happen. Reach out for a consultation.</p>
+        <a href="mailto:info@kick-mix.com" class="inline-block bg-gradient-to-r from-sky-500 to-purple-600 hover:from-sky-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all transform hover:scale-105">
+          Email: info@kick-mix.com
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-slate-500 py-8 border-t border-slate-800">
+    <p>© 2025 Kick-Mix Productions — All Rights Reserved</p>
+    <p>Anaheim, California</p>
+  </footer>
+
+  <script>
+    const services = {
+      'event-prod': {
+        title: 'Event Production',
+        image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200',
+        description: 'From intimate occasions to worldwide keynotes, we provide polished, full-scale production services. We handle sound, staging, lighting, special effects, and much more to create unforgettable live experiences.',
+        items: ['Concert-grade audio & lighting', 'Large-scale staging & rigging', 'Special FX including cryogenics & pyrotechnics', 'Worldwide keynote & corporate event production']
+      },
+      'fabrication': {
+        title: 'Custom Fabrication',
+        image: 'https://images.unsplash.com/photo-1542863282-62314e1072a4?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200',
+        description: 'Our fabrication team brings renderings to reality for any application, including film, TV, and trade shows. We use cutting-edge technology to build everything from intricate props to large-scale industrial builds and custom trade show booths.',
+        items: ['Props & animatronics for Film/TV', 'Custom trade show booth design & construction', 'Automated & robotic set pieces', 'In-house CNC, 3D printing, and welding']
+      },
+      'drones': {
+        title: 'Drone Services & Aerial Tech',
+        image: 'https://images.unsplash.com/photo-1527153912-195ef36b1393?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200',
+        description: 'We provide FAA-certified drone services for both cinematic and industrial applications. We also build custom drones tailored for specific tasks like power line inspection or aerial surveying.',
+        items: ['FAA-certified aerial photography & videography', 'Custom drones for industrial inspections', 'Data collection for agriculture & construction', 'Cinematic FPV drone operation']
+      },
+      'rentals': {
+        title: 'Interactive Rentals',
+        image: 'https://images.unsplash.com/photo-1593305842474-2c8e48a2489d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200',
+        description: 'Engage your audience with our custom-built interactive rentals. Perfect for brand activations, parties, and events, our rentals are designed to be memorable and shareable.',
+        items: ['Modern, high-quality photo booths', 'Custom-themed arcade machines', 'Interactive games & digital installations', 'Brandable experiences for marketing activations']
+      },
+      'logistics': {
+        title: 'Importing & Global Logistics',
+        image: 'https://images.unsplash.com/photo-1577563908411-5797a3a3d723?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200',
+        description: 'Leverage our expertise in global logistics to source and import products efficiently. We handle factory coordination, freight, and customs to streamline your supply chain.',
+        items: ['Product sourcing & factory management', 'End-to-end freight & logistics solutions', 'Customs clearance & consulting', 'Supply chain solutions for startups & brands']
+      }
+    };
+
+    const tabsContainer = document.getElementById('service-tabs');
+    const contentContainer = document.getElementById('service-content');
+
+    function updateContent(tabId) {
+      const service = services[tabId];
+      if (!service) return;
+
+      contentContainer.innerHTML = `
+        <div class="fade-in grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-2xl font-bold text-slate-100 mb-4">${service.title}</h3>
+            <p class="text-slate-400 mb-6">${service.description}</p>
+            <ul class="space-y-2">
+              ${service.items.map(item => `
+                <li class="flex items-start">
+                  <i class="fa-solid fa-check-circle text-sky-400 mr-3 mt-1 flex-shrink-0"></i>
+                  <span class="text-slate-300">${item}</span>
+                </li>
+              `).join('')}
+            </ul>
+          </div>
+          <div>
+            <img src="${service.image}" alt="${service.title}" class="rounded-lg shadow-lg w-full h-auto object-cover aspect-video" onerror="this.onerror=null;this.src='https://placehold.co/600x400/020617/334155?text=Image+Not+Found';">
+          </div>
+        </div>
+      `;
+    }
+
+    tabsContainer.addEventListener('click', (e) => {
+      if (e.target.classList.contains('tab')) {
+        tabsContainer.querySelectorAll('.tab').forEach(tab => {
+          tab.classList.remove('tab-active', 'text-slate-900');
+          tab.classList.add('text-slate-300', 'hover:bg-slate-700');
+        });
+        
+        e.target.classList.add('tab-active', 'text-slate-900');
+        e.target.classList.remove('text-slate-300', 'hover:bg-slate-700');
+
+        updateContent(e.target.dataset.tab);
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      updateContent('event-prod');
+    });
+  </script>
 
 </body>
 </html>
