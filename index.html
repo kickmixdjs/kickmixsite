@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Kick-Mix Productions: Full-scale event production, custom fabrication, drone services, and experiential marketing solutions based in Anaheim, CA.">
-  <meta name="keywords" content="event production, custom props, drone services, Anaheim, fabrication, trade show booths, event lighting, event audio, experiential marketing, logistics">
+  <meta name="keywords" content="event production, custom props, drone services, Anaheim, fabrication, trade show booths, event lighting, event audio, experiential marketing, logistics, testimonials">
   <title>Kick-Mix Productions | Professional Event & Fabrication Solutions</title>
 
   <!-- Tailwind CSS -->
@@ -48,15 +48,20 @@
     .fade-in {
       animation: fadeIn 0.5s ease-out forwards;
     }
-    .client-logo {
-      transition: all 0.3s ease;
-      filter: grayscale(100%) brightness(1.5) contrast(1.2);
-       opacity: 0.7;
+    @keyframes blob {
+	    0% { transform: translate(0px, 0px) scale(1); }
+	    33% { transform: translate(30px, -50px) scale(1.1); }
+	    66% { transform: translate(-20px, 20px) scale(0.9); }
+	    100% { transform: translate(0px, 0px) scale(1); }
     }
-    .client-logo:hover {
-      filter: grayscale(0%) brightness(1) contrast(1);
-      transform: scale(1.1);
-      opacity: 1;
+    .animate-blob {
+        animation: blob 7s infinite;
+    }
+    .animation-delay-2000 {
+        animation-delay: 2s;
+    }
+    .animation-delay-4000 {
+        animation-delay: 4s;
     }
   </style>
 </head>
@@ -64,8 +69,10 @@
 
   <!-- Background Elements -->
   <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
-    <div class="absolute top-0 -left-4 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-    <div class="absolute top-0 -right-4 w-72 h-72 bg-sky-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+    <div class="absolute top-0 -left-12 w-72 h-72 bg-purple-600 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+    <div class="absolute top-0 -right-12 w-72 h-72 bg-sky-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+    <div class="absolute -bottom-12 left-20 w-72 h-72 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+    <div class="absolute -bottom-16 right-20 w-72 h-72 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-3000"></div>
   </div>
 
   <!-- Header & Nav -->
@@ -75,7 +82,7 @@
       <nav class="hidden md:flex space-x-8">
         <a href="#services" class="text-slate-300 hover:text-sky-400 transition-colors">Services</a>
         <a href="#process" class="text-slate-300 hover:text-sky-400 transition-colors">Process</a>
-        <a href="#clients" class="text-slate-300 hover:text-sky-400 transition-colors">Clients</a>
+        <a href="#testimonials" class="text-slate-300 hover:text-sky-400 transition-colors">Testimonials</a>
         <a href="#contact" class="text-slate-300 hover:text-sky-400 transition-colors">Contact</a>
       </nav>
       <a href="#contact" class="hidden md:block bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded-lg transition-colors">Get a Quote</a>
@@ -121,87 +128,117 @@
         <p class="text-slate-400 mt-2">A proven, collaborative workflow to ensure your vision is realized perfectly.</p>
       </div>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700"><h3 class="text-xl font-bold text-sky-400 mb-2">1. Creative Briefing</h3><p class="text-slate-400">We meet to discuss your vision, goals, budget, and timeline, creating a project portfolio to guide the process.</p></div>
-          <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700"><h3 class="text-xl font-bold text-sky-400 mb-2">2. Brainstorming</h3><p class="text-slate-400">Our team reviews the portfolio and renders numerous creative solutions for all project particulars.</p></div>
-          <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700"><h3 class="text-xl font-bold text-sky-400 mb-2">3. Concept Presentation</h3><p class="text-slate-400">Initial concepts are presented to you for discussion and feedback.</p></div>
-          <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700"><h3 class="text-xl font-bold text-sky-400 mb-2">4. Revision</h3><p class="text-slate-400">Client-approved ideas are evaluated and revised according to budget, time, and brand expectations.</p></div>
-          <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700"><h3 class="text-xl font-bold text-sky-400 mb-2">5. Final Concept</h3><p class="text-slate-400">The polished concept is presented one last time for final approval.</p></div>
-          <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700"><h3 class="text-xl font-bold text-sky-400 mb-2">6. Execution</h3><p class="text-slate-400">Our build team takes over, fabricating and setting up the project to the exact agreed-upon specifications.</p></div>
+          <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700"><div class="flex items-center mb-3"><i class="fa-solid fa-users text-sky-400 text-2xl mr-4"></i><h3 class="text-xl font-bold text-slate-100">1. Creative Briefing</h3></div><p class="text-slate-400">We meet to discuss your vision, goals, budget, and timeline, creating a project portfolio to guide the process.</p></div>
+          <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700"><div class="flex items-center mb-3"><i class="fa-solid fa-lightbulb text-sky-400 text-2xl mr-4"></i><h3 class="text-xl font-bold text-slate-100">2. Brainstorming</h3></div><p class="text-slate-400">Our team reviews the portfolio and renders numerous creative solutions for all project particulars.</p></div>
+          <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700"><div class="flex items-center mb-3"><i class="fa-solid fa-person-chalkboard text-sky-400 text-2xl mr-4"></i><h3 class="text-xl font-bold text-slate-100">3. Concept Presentation</h3></div><p class="text-slate-400">Initial concepts are presented to you for discussion and feedback.</p></div>
+          <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700"><div class="flex items-center mb-3"><i class="fa-solid fa-pen-ruler text-sky-400 text-2xl mr-4"></i><h3 class="text-xl font-bold text-slate-100">4. Revision</h3></div><p class="text-slate-400">Client-approved ideas are evaluated and revised according to budget, time, and brand expectations.</p></div>
+          <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700"><div class="flex items-center mb-3"><i class="fa-solid fa-file-signature text-sky-400 text-2xl mr-4"></i><h3 class="text-xl font-bold text-slate-100">5. Final Concept</h3></div><p class="text-slate-400">The polished concept is presented one last time for final approval.</p></div>
+          <div class="bg-slate-800/50 p-6 rounded-lg border border-slate-700"><div class="flex items-center mb-3"><i class="fa-solid fa-gears text-sky-400 text-2xl mr-4"></i><h3 class="text-xl font-bold text-slate-100">6. Execution</h3></div><p class="text-slate-400">Our build team takes over, fabricating and setting up the project to the exact agreed-upon specifications.</p></div>
       </div>
     </section>
 
-    <!-- Client Showcase Section -->
-    <section id="clients" class="py-20">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-100">Trusted By The Best</h2>
-                <p class="text-slate-400 mt-2">We're proud to have partnered with world-class brands and organizations.</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-100">What Our Clients Say</h2>
             </div>
-            <div class="flex flex-wrap justify-center items-center gap-x-8 gap-y-6 md:gap-x-12">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="h-10 md:h-12 client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney_logo_black.svg" alt="Disney" class="h-10 md:h-12 client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Volkswagen_logo_2019.svg" alt="Volkswagen" class="h-10 md:h-12 client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/AT%26T_logo_2016.svg" alt="AT&T" class="h-8 md:h-10 client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/T-Mobile_logo_2022.svg" alt="T-Mobile" class="h-10 md:h-12 client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Rockstar_Energy_Drink_logo.svg" alt="Rockstar Energy" class="h-10 md:h-12 client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.svg" alt="Uber" class="h-8 md:h-10 client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Samsung_Logo.svg" alt="Samsung" class="h-10 md:h-12 client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Sony_logo.svg" alt="Sony" class="h-8 md:h-10 client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" alt="NASA" class="h-8 md:h-10 client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg" alt="Tesla" class="h-8 md:h-10 client-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Microsoft" class="h-8 md:h-10 client-logo">
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700">
+                    <p class="text-slate-300 mb-4">"Kick-Mix consistently delivers beyond expectations. Their attention to detail and ability to execute complex fabrications on a tight deadline is unmatched."</p>
+                    <p class="font-bold text-slate-100">- Senior Producer, Major Film Studio</p>
+                </div>
+                <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700">
+                    <p class="text-slate-300 mb-4">"For our annual keynote, we needed a flawless technical production. The team handled everything from audio to lighting perfectly. True professionals."</p>
+                    <p class="font-bold text-slate-100">- Director of Events, Fortune 500 Tech Company</p>
+                </div>
+                <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700">
+                    <p class="text-slate-300 mb-4">"The custom trade show booth they built for us was the star of the convention. The design was brilliant and the interactive elements were a huge hit."</p>
+                    <p class="font-bold text-slate-100">- Marketing Manager, T-Mobile</p>
+                </div>
+                <div class="bg-slate-800/50 p-8 rounded-lg border border-slate-700">
+                    <p class="text-slate-300 mb-4">"Their drone team provided stunning aerial footage for our commercial. They're not just pilots; they're artists with a technical edge."</p>
+                    <p class="font-bold text-slate-100">- Creative Director, Automotive Brand</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="container mx-auto px-6 py-20">
-      <div class="bg-slate-800/50 rounded-xl border border-slate-700 p-8 md:p-12 max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-slate-100 mb-3">Have a Project in Mind?</h2>
-        <p class="text-slate-400 mb-6">Let's talk about how we can make it happen. Reach out for a consultation.</p>
-        <a href="mailto:info@kick-mix.com" class="inline-block bg-gradient-to-r from-sky-500 to-purple-600 hover:from-sky-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all transform hover:scale-105">
-          Email: info@kick-mix.com
-        </a>
+      <div class="bg-slate-800/50 rounded-xl border border-slate-700 p-8 md:p-12 max-w-3xl mx-auto">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-slate-100">Have a Project in Mind?</h2>
+            <p class="text-slate-400 mt-2">Let's talk about how we can make it happen. Reach out for a consultation.</p>
+        </div>
+        <!-- To make this form work, you need a backend service. 
+             Sign up for a service like Formspree.io, get your unique URL, 
+             and replace the "#" in the action attribute with your URL. -->
+        <form action="#" method="POST">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <input type="text" placeholder="Your Name" required class="bg-slate-700 border border-slate-600 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-sky-500">
+                <input type="email" placeholder="Your Email" required class="bg-slate-700 border border-slate-600 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-sky-500">
+            </div>
+            <div class="mb-6">
+                <select required class="bg-slate-700 border border-slate-600 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-sky-500">
+                    <option value="" disabled selected>Select a service of interest...</option>
+                    <option>Event Production</option>
+                    <option>Custom Fabrication</option>
+                    <option>Drone Services</option>
+                    <option>Interactive Rentals</option>
+                    <option>Importing & Logistics</option>
+                </select>
+            </div>
+            <div class="mb-6">
+                <textarea placeholder="Tell us about your project..." rows="4" required class="bg-slate-700 border border-slate-600 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-sky-500"></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="bg-gradient-to-r from-sky-500 to-purple-600 hover:from-sky-600 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-all transform hover:scale-105">
+                    Send Message
+                </button>
+            </div>
+        </form>
       </div>
     </section>
 
   </main>
 
   <!-- Footer -->
-  <footer class="text-center text-slate-500 py-8 border-t border-slate-800">
+  <footer class="text-center text-slate-500 py-8 border-t border-slate-800 space-y-2">
     <p>© 2025 Kick-Mix Productions — All Rights Reserved</p>
     <p>Anaheim, California</p>
+    <p><a href="mailto:info@kick-mix.com" class="hover:text-sky-400 transition-colors">info@kick-mix.com</a></p>
   </footer>
 
   <script>
     const services = {
       'event-prod': {
         title: 'Event Production',
-        image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200',
+        icon: 'fa-solid fa-sliders',
         description: 'From intimate occasions to worldwide keynotes, we provide polished, full-scale production services. We handle sound, staging, lighting, special effects, and much more to create unforgettable live experiences.',
         items: ['Concert-grade audio & lighting', 'Large-scale staging & rigging', 'Special FX including cryogenics & pyrotechnics', 'Worldwide keynote & corporate event production']
       },
       'fabrication': {
         title: 'Custom Fabrication',
-        image: 'https://images.unsplash.com/photo-1542863282-62314e1072a4?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200',
+        icon: 'fa-solid fa-helmet-safety',
         description: 'Our fabrication team brings renderings to reality for any application, including film, TV, and trade shows. We use cutting-edge technology to build everything from intricate props to large-scale industrial builds and custom trade show booths.',
         items: ['Props & animatronics for Film/TV', 'Custom trade show booth design & construction', 'Automated & robotic set pieces', 'In-house CNC, 3D printing, and welding']
       },
       'drones': {
         title: 'Drone Services & Aerial Tech',
-        image: 'https://images.unsplash.com/photo-1527153912-195ef36b1393?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200',
+        icon: 'fa-solid fa-helicopter',
         description: 'We provide FAA-certified drone services for both cinematic and industrial applications. We also build custom drones tailored for specific tasks like power line inspection or aerial surveying.',
         items: ['FAA-certified aerial photography & videography', 'Custom drones for industrial inspections', 'Data collection for agriculture & construction', 'Cinematic FPV drone operation']
       },
       'rentals': {
         title: 'Interactive Rentals',
-        image: 'https://images.unsplash.com/photo-1593305842474-2c8e48a2489d?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200',
+        icon: 'fa-solid fa-gamepad',
         description: 'Engage your audience with our custom-built interactive rentals. Perfect for brand activations, parties, and events, our rentals are designed to be memorable and shareable.',
         items: ['Modern, high-quality photo booths', 'Custom-themed arcade machines', 'Interactive games & digital installations', 'Brandable experiences for marketing activations']
       },
       'logistics': {
         title: 'Importing & Global Logistics',
-        image: 'https://images.unsplash.com/photo-1577563908411-5797a3a3d723?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200',
+        icon: 'fa-solid fa-truck-fast',
         description: 'Leverage our expertise in global logistics to source and import products efficiently. We handle factory coordination, freight, and customs to streamline your supply chain.',
         items: ['Product sourcing & factory management', 'End-to-end freight & logistics solutions', 'Customs clearance & consulting', 'Supply chain solutions for startups & brands']
       }
@@ -228,8 +265,8 @@
               `).join('')}
             </ul>
           </div>
-          <div>
-            <img src="${service.image}" alt="${service.title}" class="rounded-lg shadow-lg w-full h-auto object-cover aspect-video" onerror="this.onerror=null;this.src='https://placehold.co/600x400/020617/334155?text=Image+Not+Found';">
+          <div class="flex items-center justify-center p-4">
+            <i class="${service.icon} text-8xl md:text-9xl text-slate-600"></i>
           </div>
         </div>
       `;
