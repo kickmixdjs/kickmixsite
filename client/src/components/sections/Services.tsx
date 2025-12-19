@@ -1,7 +1,5 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mic2, Hammer, Plane, MonitorPlay, Box } from "lucide-react";
 import { motion } from "framer-motion";
+import { Mic2, Hammer, Plane, MonitorPlay, Box, Sparkles } from "lucide-react";
 import productionImg from "@assets/generated_images/concert_stage_production_setup.png";
 import fabricationImg from "@assets/generated_images/custom_fabrication_workshop.png";
 import dronesImg from "@assets/generated_images/aerial_drone_city_view.png";
@@ -11,144 +9,113 @@ import logisticsImg from "@assets/generated_images/logistics_warehouse_operation
 const services = [
   {
     id: "production",
-    label: "Event Production",
     icon: Mic2,
-    title: "Full-Scale Event Production",
-    description: "From intimate occasions to worldwide keynotes, we provide polished, full-scale production services. We handle sound, staging, lighting, special effects, and much more to create unforgettable live experiences.",
-    features: [
-      "Concert-grade audio & lighting",
-      "Large-scale staging & rigging",
-      "Special FX including cryogenics & pyrotechnics",
-      "Worldwide keynote & corporate event production"
-    ],
-    image: productionImg
+    title: "EVENT PRODUCTION",
+    shortDesc: "Turnkey solutions for live events",
+    fullDesc: "From intimate gatherings to massive festivals, we handle every technical element. Concert-grade audio, dynamic lighting design, precision staging, and special effects bring your vision to life.",
+    image: productionImg,
+    specs: ["Audio Engineering", "Lighting Design", "Stage Production", "Special Effects"]
   },
   {
     id: "fabrication",
-    label: "Custom Fabrication",
     icon: Hammer,
-    title: "Custom Scenic Fabrication",
-    description: "Our in-house fabrication team builds custom stages, scenic elements, and brand activations that defy gravity and expectation.",
-    features: [
-      "Custom stage design & build",
-      "Trade show booths & activations",
-      "Permanent installations",
-      "CNC machining & 3D printing"
-    ],
-    image: fabricationImg
+    title: "CUSTOM FABRICATION",
+    shortDesc: "Bespoke scenery & installations",
+    fullDesc: "Our in-house fabrication team designs and builds custom stages, scenic elements, and brand activations that push creative boundaries and defy expectations.",
+    image: fabricationImg,
+    specs: ["Stage Design", "3D Fabrication", "CNC Machining", "Custom Builds"]
   },
   {
     id: "drones",
-    label: "Drone Services",
     icon: Plane,
-    title: "Aerial Drone Services",
-    description: "Capture stunning aerial perspectives with our licensed drone pilots and high-end cinema equipment.",
-    features: [
-      "Live broadcast aerials",
-      "Commercial cinematography",
-      "Drone light shows",
-      "Inspection & surveying"
-    ],
-    image: dronesImg
+    title: "DRONE SERVICES",
+    shortDesc: "Aerial cinematography & coverage",
+    fullDesc: "Capture stunning perspectives with our licensed pilots and cinema-grade equipment. Live aerials, commercial production, and drone light shows that elevate your event.",
+    image: dronesImg,
+    specs: ["Live Broadcast", "Cinematography", "Drone Light Shows", "Surveying"]
   },
   {
     id: "interactive",
-    label: "Interactive Rentals",
     icon: MonitorPlay,
-    title: "Interactive Technology",
-    description: "Engage your audience with cutting-edge interactive technology rentals and custom software solutions.",
-    features: [
-      "Touch screens & kiosks",
-      "VR/AR experiences",
-      "LED video walls",
-      "Gamification & apps"
-    ],
-    image: interactiveImg
+    title: "INTERACTIVE TECH",
+    shortDesc: "Cutting-edge audience engagement",
+    fullDesc: "Immersive technology that transforms passive audiences into active participants. LED walls, VR experiences, touch displays, and custom software solutions.",
+    image: interactiveImg,
+    specs: ["LED Video Walls", "VR/AR", "Touch Screens", "Real-time Systems"]
   },
   {
     id: "logistics",
-    label: "Importing & Logistics",
     icon: Box,
-    title: "Global Logistics",
-    description: "We handle the complex logistics of getting gear and teams where they need to be, anywhere in the world.",
-    features: [
-      "International freight",
-      "Customs brokerage",
-      "Tour trucking & transport",
-      "Warehousing & storage"
-    ],
-    image: logisticsImg
+    title: "LOGISTICS & TRANSPORT",
+    shortDesc: "End-to-end equipment management",
+    fullDesc: "Global logistics expertise to move your production anywhere. International freight, customs brokerage, warehousing, and tour support across all markets.",
+    image: logisticsImg,
+    specs: ["International Freight", "Tour Support", "Warehousing", "Equipment Management"]
   }
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none" />
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">OUR SERVICES</h2>
-          <p className="text-muted-foreground text-lg">
-            Click a tab to see how we can help bring your vision to life.
+    <section id="services" className="py-32 bg-background">
+      <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <div className="mb-20">
+          <h2 className="text-5xl md:text-6xl font-black mb-4">SERVICES</h2>
+          <p className="text-xl text-muted-foreground max-w-2xl">
+            Complete production services tailored to your event's unique demands.
           </p>
         </div>
 
-        <Tabs defaultValue="production" className="w-full max-w-5xl mx-auto">
-          <TabsList className="flex flex-wrap h-auto justify-center gap-2 bg-transparent p-0 mb-12">
-            {services.map((service) => (
-              <TabsTrigger
-                key={service.id}
-                value={service.id}
-                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground bg-secondary/50 border border-border px-6 py-3 rounded-md transition-all hover:bg-secondary"
-              >
-                {service.label}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+        {/* Services Grid */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="group"
+            >
+              <div className="relative overflow-hidden rounded-lg border border-border/50 bg-secondary/10 hover:bg-secondary/20 transition-all duration-500">
+                {/* Image */}
+                <div className="relative h-80 overflow-hidden bg-secondary">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+                </div>
 
-          {services.map((service) => (
-            <TabsContent key={service.id} value={service.id} className="mt-0">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-              >
-                <Card className="bg-secondary/20 border-border/50 backdrop-blur-sm overflow-hidden">
-                  <div className="grid md:grid-cols-2 gap-0">
-                    <div className="p-8 md:p-12 flex flex-col justify-center">
-                      <div className="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary mb-6">
-                        <service.icon size={24} />
-                      </div>
-                      <h3 className="text-2xl md:text-3xl font-bold mb-4 font-display text-white">
-                        {service.title}
-                      </h3>
-                      <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-                        {service.description}
-                      </p>
-                      <ul className="space-y-3">
-                        {service.features.map((feature, i) => (
-                          <li key={i} className="flex items-center text-sm font-medium text-slate-300">
-                            <span className="w-1.5 h-1.5 rounded-full bg-primary mr-3" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
+                {/* Content */}
+                <div className="p-8">
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <h3 className="text-2xl font-black text-white mb-1">{service.title}</h3>
+                      <p className="text-primary font-bold text-sm">{service.shortDesc}</p>
                     </div>
-                    <div className="min-h-[300px] relative overflow-hidden group">
-                      <img 
-                        src={service.image} 
-                        alt={service.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-l from-background via-background/40 to-transparent" />
-                    </div>
+                    <service.icon className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
                   </div>
-                </Card>
-              </motion.div>
-            </TabsContent>
+
+                  <p className="text-slate-300 mb-6 leading-relaxed">
+                    {service.fullDesc}
+                  </p>
+
+                  {/* Specs */}
+                  <div className="space-y-2">
+                    {service.specs.map((spec, i) => (
+                      <div key={i} className="flex items-center text-sm text-muted-foreground">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary mr-3" />
+                        {spec}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           ))}
-        </Tabs>
+        </div>
       </div>
     </section>
   );
