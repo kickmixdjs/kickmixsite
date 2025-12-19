@@ -3,7 +3,7 @@ import { Mic2, Hammer, Plane, MonitorPlay, Box, Sparkles } from "lucide-react";
 import productionImg from "@assets/generated_images/concert_stage_production_setup.png";
 import fabricationImg from "@assets/generated_images/custom_fabrication_workshop.png";
 import dronesImg from "@assets/generated_images/aerial_drone_city_view.png";
-import interactiveImg from "@assets/generated_images/interactive_led_video_wall.png";
+import interactiveImg from "@assets/generated_images/interactive_vr/ar_experience.png";
 import logisticsImg from "@assets/generated_images/logistics_warehouse_operation.png";
 
 const services = [
