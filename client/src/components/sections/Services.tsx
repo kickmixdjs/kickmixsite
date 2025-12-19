@@ -2,6 +2,11 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mic2, Hammer, Plane, MonitorPlay, Box } from "lucide-react";
 import { motion } from "framer-motion";
+import productionImg from "@assets/generated_images/concert_stage_production_setup.png";
+import fabricationImg from "@assets/generated_images/custom_fabrication_workshop.png";
+import dronesImg from "@assets/generated_images/aerial_drone_city_view.png";
+import interactiveImg from "@assets/generated_images/interactive_led_video_wall.png";
+import logisticsImg from "@assets/generated_images/logistics_warehouse_operation.png";
 
 const services = [
   {
@@ -15,7 +20,8 @@ const services = [
       "Large-scale staging & rigging",
       "Special FX including cryogenics & pyrotechnics",
       "Worldwide keynote & corporate event production"
-    ]
+    ],
+    image: productionImg
   },
   {
     id: "fabrication",
@@ -28,7 +34,8 @@ const services = [
       "Trade show booths & activations",
       "Permanent installations",
       "CNC machining & 3D printing"
-    ]
+    ],
+    image: fabricationImg
   },
   {
     id: "drones",
@@ -41,7 +48,8 @@ const services = [
       "Commercial cinematography",
       "Drone light shows",
       "Inspection & surveying"
-    ]
+    ],
+    image: dronesImg
   },
   {
     id: "interactive",
@@ -54,7 +62,8 @@ const services = [
       "VR/AR experiences",
       "LED video walls",
       "Gamification & apps"
-    ]
+    ],
+    image: interactiveImg
   },
   {
     id: "logistics",
@@ -67,7 +76,8 @@ const services = [
       "Customs brokerage",
       "Tour trucking & transport",
       "Warehousing & storage"
-    ]
+    ],
+    image: logisticsImg
   }
 ];
 
@@ -125,10 +135,13 @@ export default function Services() {
                         ))}
                       </ul>
                     </div>
-                    <div className="bg-gradient-to-br from-primary/20 to-purple-900/20 min-h-[300px] flex items-center justify-center relative">
-                      {/* Abstract visualization since we don't have photos for each */}
-                      <div className="absolute inset-0 bg-grid-pattern opacity-20" />
-                      <service.icon size={120} className="text-primary/10" />
+                    <div className="min-h-[300px] relative overflow-hidden group">
+                      <img 
+                        src={service.image} 
+                        alt={service.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-l from-background via-background/40 to-transparent" />
                     </div>
                   </div>
                 </Card>

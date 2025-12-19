@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import meetingImg from "@assets/generated_images/professional_meeting_room.png";
 
 const steps = [
   {
@@ -37,14 +38,17 @@ export default function Process() {
   return (
     <section id="process" className="py-24 bg-background border-y border-border/40">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">OUR CREATIVE PROCESS</h2>
-          <p className="text-muted-foreground text-lg">
-            A proven, collaborative workflow to ensure your vision is realized perfectly.
-          </p>
-        </div>
+        <div className="grid lg:grid-cols-3 gap-12 items-start">
+          {/* Left Column - Process Steps */}
+          <div className="lg:col-span-2">
+            <div className="mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold mb-4">OUR CREATIVE PROCESS</h2>
+              <p className="text-muted-foreground text-lg">
+                A proven, collaborative workflow to ensure your vision is realized perfectly.
+              </p>
+            </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -69,6 +73,23 @@ export default function Process() {
               </div>
             </motion.div>
           ))}
+            </div>
+          </div>
+
+          {/* Right Column - Image */}
+          <div className="hidden lg:block sticky top-24">
+            <div className="relative rounded-2xl overflow-hidden border border-border/50 shadow-2xl">
+              <img 
+                src={meetingImg} 
+                alt="Creative Process Meeting"
+                className="w-full h-auto"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background to-transparent">
+                <p className="text-sm font-mono text-primary">We collaborate closely with every client</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

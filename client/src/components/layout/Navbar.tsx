@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -24,7 +23,7 @@ export default function Navbar() {
     { name: "Contact", href: "#contact" },
   ];
 
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const scrollToSection = (e: React.MouseEvent<HTMLButtonElement>, href: string) => {
     e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
@@ -41,23 +40,20 @@ export default function Navbar() {
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link href="/">
-          <a className="text-2xl font-bold font-display tracking-wider text-foreground">
-            KICK<span className="text-primary">-</span>MIX
-          </a>
-        </Link>
+        <div className="text-2xl font-bold font-display tracking-wider text-foreground cursor-pointer hover:text-primary transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          KICK<span className="text-primary">-</span>MIX
+        </div>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <button
               key={link.name}
-              href={link.href}
-              onClick={(e) => scrollToSection(e, link.href)}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest"
+              onClick={(e) => scrollToSection(e as any, link.href)}
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors uppercase tracking-widest bg-transparent border-none cursor-pointer"
             >
               {link.name}
-            </a>
+            </button>
           ))}
           <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold tracking-wide">
             GET A QUOTE
@@ -77,14 +73,13 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-background border-b border-border p-4 flex flex-col gap-4 shadow-2xl animate-in slide-in-from-top-5">
           {navLinks.map((link) => (
-            <a
+            <button
               key={link.name}
-              href={link.href}
-              onClick={(e) => scrollToSection(e, link.href)}
-              className="text-lg font-medium text-foreground hover:text-primary py-2"
+              onClick={(e) => scrollToSection(e as any, link.href)}
+              className="text-lg font-medium text-foreground hover:text-primary py-2 bg-transparent border-none cursor-pointer text-left"
             >
               {link.name}
-            </a>
+            </button>
           ))}
           <Button className="w-full bg-primary font-bold">GET A QUOTE</Button>
         </div>
