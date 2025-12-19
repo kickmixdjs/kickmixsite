@@ -41,7 +41,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="text-2xl font-bold font-display tracking-wider text-foreground cursor-pointer hover:text-primary transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          KICK<span className="text-primary">-</span>MIX
+          K<span className="text-primary">.</span>M PRODUCTIONS
         </div>
 
         {/* Desktop Nav */}

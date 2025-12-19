@@ -32,8 +32,8 @@ export default function Footer() {
                 <Mail className="text-primary mt-1" />
                 <div>
                   <h4 className="font-bold text-white">Email Us</h4>
-                  <a href="mailto:info@kick-mix.com" className="text-muted-foreground hover:text-white transition-colors">
-                    info@kick-mix.com
+                  <a href="mailto:info@kmproductions.com" className="text-muted-foreground hover:text-white transition-colors">
+                    info@kmproductions.com
                   </a>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-border/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Kick-Mix Productions. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} K.M Productions. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
