@@ -4,6 +4,7 @@ import Services from "@/components/sections/Services";
 import Portfolio from "@/components/sections/Portfolio";
 import Gallery from "@/components/sections/Gallery";
 import Installations from "@/components/sections/Installations";
+import PhotoBoothCustomization from "@/components/sections/PhotoBoothCustomization";
 import Process from "@/components/sections/Process";
 import Clients from "@/components/sections/Clients";
 import Testimonials from "@/components/sections/Testimonials";
@@ -18,6 +19,7 @@ export default function Home() {
       <Portfolio />
       <Gallery />
       <Installations />
+      <PhotoBoothCustomization />
       <Process />
       <Clients />
       <Testimonials />
