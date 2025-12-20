@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import heroBg from "@assets/generated_images/large_festival_stage_with_crowd.png";
 
 export default function Hero() {
@@ -14,7 +14,7 @@ export default function Hero() {
           className="w-full h-full object-cover"
         />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/40 z-10" />
+        <div className="absolute inset-0 bg-black/50 z-10" />
       </div>
 
       {/* Content */}
@@ -28,17 +28,26 @@ export default function Hero() {
             EVENTS <br />
             <span className="text-gradient">EVOLVED</span>
           </h1>
-          <p className="text-xl md:text-2xl text-slate-100 mb-12 font-light max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-slate-100 mb-2 font-light max-w-2xl mx-auto">
             Full-scale production from concept to execution
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* Phone Link */}
+          <a 
+            href="tel:7148013597" 
+            className="inline-block text-primary hover:text-white font-mono font-bold mb-10 text-xl tracking-[0.2em] transition-all duration-300"
+          >
+            714.801.3597
+          </a>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button asChild size="lg" className="text-base h-12 px-8 font-bold bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(14,165,233,0.3)] cursor-pointer">
-              <a href="#contact-form">GET STARTED</a>
+              <a href="#contact">GET STARTED</a>
             </Button>
+
             <Button asChild size="lg" variant="outline" className="text-base h-12 px-8 border-white text-white hover:bg-white/10 font-bold cursor-pointer">
-              <a href="#services">
-                EXPLORE WORK <ArrowRight className="ml-2 w-4 h-4" />
+              <a href="tel:7148013597" className="flex items-center gap-2">
+                CALL NOW <Phone className="w-4 h-4" />
               </a>
             </Button>
           </div>
