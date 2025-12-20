@@ -1,35 +1,35 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote } from "lucide-react";
-import weddingImg from "@assets/generated_images/wedding_reception_venue.png";
-import concertImg from "@assets/generated_images/outdoor_concert_venue_crowd.png";
-import nightclubImg from "@assets/generated_images/luxury_nightclub_interior.png";
-import beachImg from "@assets/generated_images/beach_wedding_ceremony_sunset.png";
+import galaImg from "@assets/generated_images/luxury_corporate_gala_ballroom.png";
+import boothImg from "@assets/generated_images/premium_brand_activation_booth.png";
+import rooftopImg from "@assets/generated_images/upscale_rooftop_event_venue.png";
+import concertImg from "@assets/generated_images/professional_concert_production_setup.png";
 
 const testimonials = [
   {
     quote: "K.M Productions consistently delivers beyond expectations. Their attention to detail and ability to execute complex fabrications on a tight deadline is unmatched.",
     author: "Senior Producer",
     company: "Major Film Studio",
-    image: weddingImg
+    image: galaImg
   },
   {
     quote: "For our annual keynote, we needed a flawless technical production. The team handled everything from audio to lighting perfectly. True professionals.",
     author: "Director of Events",
     company: "Fortune 500 Tech Company",
-    image: concertImg
+    image: boothImg
   },
   {
     quote: "The custom trade show booth they built for us was the star of the convention. The design was brilliant and the interactive elements were a huge hit.",
     author: "Marketing Manager",
     company: "T-Mobile",
-    image: nightclubImg
+    image: rooftopImg
   },
   {
     quote: "Their drone team provided stunning aerial footage for our commercial. They're not just pilots; they're artists with a technical edge.",
     author: "Creative Director",
     company: "Automotive Brand",
-    image: beachImg
+    image: concertImg
   }
 ];
 
