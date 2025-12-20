@@ -11,11 +11,15 @@ const allClients = [
   "Nokia", "HP", "Ford", "EA", "NBC", "Pepsi"
 ];
 
-const artists = [
-  "Beyonce", "Coldplay", "Daft Punk", "Drake", "Eminem", "Guns N' Roses", 
-  "Jay Z", "Justin Bieber", "Kanye West", "Katy Perry", "Kendrick Lamar", 
-  "Lady Gaga", "Maroon 5", "Rihanna", "Rolling Stones", "Skrillex", 
-  "Snoop Dogg", "Taylor Swift", "The Weeknd", "Wu-Tang Clan"
+const featuredArtists = [
+  "Beyonce", "Taylor Swift", "The Weeknd", "Drake", "Rihanna", "Kanye West"
+];
+
+const allArtists = [
+  "Coldplay", "Daft Punk", "Eminem", "Guns N' Roses", 
+  "Jay Z", "Justin Bieber", "Katy Perry", "Kendrick Lamar", 
+  "Lady Gaga", "Maroon 5", "Rolling Stones", "Skrillex", 
+  "Snoop Dogg", "Wu-Tang Clan"
 ];
 
 export default function Clients() {
@@ -70,21 +74,41 @@ export default function Clients() {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 mb-8">
-        <p className="text-center text-primary font-mono text-sm uppercase tracking-widest mb-4">Artists We've Supported</p>
+      <div className="container mx-auto px-4 mb-16">
+        <p className="text-center text-primary font-mono text-sm uppercase tracking-widest mb-8">Artists We've Supported</p>
+        
+        {/* Featured Artists - Static */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+          {featuredArtists.map((artist, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="text-center"
+            >
+              <p className="text-lg md:text-2xl font-black text-muted-foreground/40 hover:text-primary/60 transition-colors uppercase tracking-tight">
+                {artist}
+              </p>
+            </motion.div>
+          ))}
+        </div>
       </div>
 
-      {/* Marquee 2 - Artists */}
+      <div className="border-t border-border/30 my-12"></div>
+
+      {/* Additional Artists - Scrolling */}
       <div className="relative flex overflow-x-hidden group">
         <div className="animate-marquee-reverse whitespace-nowrap flex gap-12 text-2xl md:text-3xl font-bold text-muted-foreground/10 uppercase font-sans tracking-wide">
-          {artists.concat(artists).map((artist, i) => (
+          {allArtists.concat(allArtists).map((artist, i) => (
             <span key={i} className="hover:text-white transition-colors cursor-default">
               {artist}
             </span>
           ))}
         </div>
         <div className="absolute top-0 flex overflow-x-hidden animate-marquee2-reverse whitespace-nowrap gap-12 text-2xl md:text-3xl font-bold text-muted-foreground/10 uppercase font-sans tracking-wide">
-          {artists.concat(artists).map((artist, i) => (
+          {allArtists.concat(allArtists).map((artist, i) => (
             <span key={i} className="hover:text-white transition-colors cursor-default">
               {artist}
             </span>
