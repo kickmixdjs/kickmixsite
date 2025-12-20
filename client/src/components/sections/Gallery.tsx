@@ -4,6 +4,7 @@ import concertImg from "@assets/generated_images/outdoor_concert_venue_crowd.png
 import nightclubImg from "@assets/generated_images/luxury_nightclub_interior.png";
 import productImg from "@assets/generated_images/product_launch_event_stage.png";
 import beachImg from "@assets/generated_images/beach_wedding_ceremony_sunset.png";
+import awardsImg from "@assets/generated_images/corporate_awards_ceremony_stage.png";
 
 const galleryItems = [
   {
@@ -30,6 +31,11 @@ const galleryItems = [
     title: "Beach Ceremony",
     category: "OUTDOOR EVENTS",
     image: beachImg
+  },
+  {
+    title: "Awards Ceremony",
+    category: "GALAS & CEREMONIES",
+    image: awardsImg
   }
 ];
 
