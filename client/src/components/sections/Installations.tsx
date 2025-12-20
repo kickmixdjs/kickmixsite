@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Camera, Dices } from "lucide-react";
 import photoBoothImg from "@assets/generated_images/luxury_photo_booth_in_nightclub.png";
-import interactiveGamesImg from "@assets/generated_images/ping_pong_toss_game_bar_setup.png";
+import interactiveGamesImg from "@assets/generated_images/gaming_lounge_entertainment_setup.png";
 import photoBoothLoungImg from "@assets/generated_images/photo_booth_lounge_installation.png";
 import moreGamesImg from "@assets/generated_images/interactive_games_nightclub_installation.png";
 
