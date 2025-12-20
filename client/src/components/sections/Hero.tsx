@@ -34,10 +34,10 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="text-base h-12 px-8 font-bold bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_20px_rgba(14,165,233,0.3)] cursor-pointer">
-              <a href="#contact">GET STARTED</a>
+              <a href="#contact-form">GET STARTED</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="text-base h-12 px-8 border-white text-white hover:bg-white/10 font-bold cursor-pointer">
-              <a href="#work">
+              <a href="#services">
                 EXPLORE WORK <ArrowRight className="ml-2 w-4 h-4" />
               </a>
             </Button>
