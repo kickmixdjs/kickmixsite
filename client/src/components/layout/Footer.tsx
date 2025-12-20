@@ -42,21 +42,21 @@ export default function Footer() {
 
           {/* Form */}
           <div className="bg-background border border-border/50 rounded-2xl p-8 shadow-2xl">
-            <form className="space-y-6">
+            <form action="https://formspree.io/f/mnnvkwaq" method="POST" className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-muted-foreground">Name</label>
-                  <Input placeholder="John Doe" className="bg-secondary/50 border-border/50" />
+                  <Input name="name" placeholder="John Doe" className="bg-secondary/50 border-border/50" required />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-medium text-muted-foreground">Email</label>
-                  <Input placeholder="john@example.com" type="email" className="bg-secondary/50 border-border/50" />
+                  <Input name="email" placeholder="john@example.com" type="email" className="bg-secondary/50 border-border/50" required />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <label className="text-sm font-medium text-muted-foreground">Service of Interest</label>
-                <Select>
+                <Select name="service">
                   <SelectTrigger className="bg-secondary/50 border-border/50">
                     <SelectValue placeholder="Select a service..." />
                   </SelectTrigger>
@@ -72,22 +72,18 @@ export default function Footer() {
 
               <div className="space-y-2">
                 <label className="text-sm font-medium text-muted-foreground">Message</label>
-                <Textarea placeholder="Tell us about your project..." className="min-h-[120px] bg-secondary/50 border-border/50" />
+                <Textarea name="message" placeholder="Tell us about your project..." className="min-h-[120px] bg-secondary/50 border-border/50" required />
               </div>
 
-              <Button size="lg" className="w-full font-bold bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button type="submit" size="lg" className="w-full font-bold bg-primary text-primary-foreground hover:bg-primary/90">
                 SEND MESSAGE
               </Button>
             </form>
           </div>
         </div>
 
-        <div className="border-t border-border/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+        <div className="border-t border-border/30 pt-8 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} K.M Productions. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-          </div>
         </div>
       </div>
     </footer>
