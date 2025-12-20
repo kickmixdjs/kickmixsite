@@ -32,8 +32,8 @@ export default function Footer() {
                 <Mail className="text-primary mt-1" />
                 <div>
                   <h4 className="font-bold text-white">Email Us</h4>
-                  <a href="mailto:info@kmproductions.com" className="text-muted-foreground hover:text-white transition-colors">
-                    info@kmproductions.com
+                  <a href="mailto:info@kick-mix.com" className="text-muted-foreground hover:text-white transition-colors">
+                    info@kick-mix.com
                   </a>
                 </div>
               </div>
