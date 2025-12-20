@@ -83,7 +83,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-border/30 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} K.M Productions. All rights reserved.</p>
+          <p>&copy; 2026 K.M Productions. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -55,7 +55,7 @@ export default function Navbar() {
               {link.name}
             </button>
           ))}
-          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold tracking-wide">
+          <Button onClick={(e) => scrollToSection(e as any, "#contact")} className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold tracking-wide">
             GET A QUOTE
           </Button>
         </div>
@@ -81,7 +81,7 @@ export default function Navbar() {
               {link.name}
             </button>
           ))}
-          <Button className="w-full bg-primary font-bold">GET A QUOTE</Button>
+          <Button onClick={(e) => scrollToSection(e as any, "#contact")} className="w-full bg-primary font-bold">GET A QUOTE</Button>
         </div>
       )}
     </nav>
