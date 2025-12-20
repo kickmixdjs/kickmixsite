@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Camera, Gamepad2 } from "lucide-react";
+import { Camera, Dices } from "lucide-react";
 import photoBoothImg from "@assets/generated_images/luxury_photo_booth_in_nightclub.png";
-import arcadeImg from "@assets/generated_images/arcade_games_in_bar.png";
+import interactiveGamesImg from "@assets/generated_images/ping_pong_toss_game_bar_setup.png";
 import photoBoothLoungImg from "@assets/generated_images/photo_booth_lounge_installation.png";
-import arcadeStationImg from "@assets/generated_images/interactive_arcade_gaming_station.png";
+import moreGamesImg from "@assets/generated_images/interactive_games_nightclub_installation.png";
 
 const installations = [
   {
@@ -16,13 +16,13 @@ const installations = [
     images: [photoBoothImg, photoBoothLoungImg]
   },
   {
-    id: "arcade",
-    icon: Gamepad2,
-    title: "ARCADE ENTERTAINMENT",
-    shortDesc: "Custom gaming installations",
-    fullDesc: "Premium arcade cabinets and gaming stations designed for bars and nightlife venues. Increase customer engagement and venue revenue with state-of-the-art entertainment. Permanent installations and short-term rentals available.",
-    features: ["Custom Arcade Cabinets", "Gaming Consoles", "LED Interactive Systems", "Revenue Sharing Options"],
-    images: [arcadeImg, arcadeStationImg]
+    id: "interactive-games",
+    icon: Dices,
+    title: "INTERACTIVE GAMES & ENTERTAINMENT",
+    shortDesc: "Custom physical entertainment installations",
+    fullDesc: "Creative, interactive games and entertainment installations designed to drive engagement and revenue. From ping pong toss to custom-built games, we create memorable experiences that keep guests entertained. Permanent installations and event rentals available.",
+    features: ["Custom Game Design & Build", "Ping Pong Toss & Cornhole", "Creative Interactive Experiences", "Revenue-Generating Setups"],
+    images: [interactiveGamesImg, moreGamesImg]
   }
 ];
 
@@ -34,7 +34,7 @@ export default function Installations() {
         <div className="mb-20">
           <h2 className="text-5xl md:text-6xl font-black mb-4">VENUE EXPERIENCES</h2>
           <p className="text-xl text-muted-foreground max-w-2xl">
-            Custom photo booths and arcade entertainment designed to maximize engagement and revenue for bars, clubs, and nightlife venues.
+            Custom photo booths and interactive entertainment installations designed to maximize engagement and revenue for bars, clubs, and nightlife venues.
           </p>
         </div>
 
@@ -109,7 +109,7 @@ export default function Installations() {
             <div>
               <h3 className="text-2xl font-black mb-4 text-primary">PERMANENT INSTALLATIONS</h3>
               <p className="text-slate-300 mb-6 leading-relaxed">
-                We handle complete design, fabrication, and installation of custom photo booths and arcade systems. From concept through setup, we ensure seamless integration into your venue. Professional installation teams and ongoing maintenance support included.
+                We handle complete design, fabrication, and installation of custom photo booths and interactive entertainment systems. From concept through setup, we ensure seamless integration into your venue. Professional installation teams and ongoing maintenance support included.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -130,7 +130,7 @@ export default function Installations() {
             <div>
               <h3 className="text-2xl font-black mb-4 text-primary">RENTAL OPTIONS</h3>
               <p className="text-slate-300 mb-6 leading-relaxed">
-                Need entertainment for a one-time event? We provide short-term rentals of photo booths and arcade systems for concerts, festivals, private events, and special promotions. Full technical support and operator assistance available.
+                Need entertainment for a one-time event? We provide short-term rentals of photo booths and interactive games for concerts, festivals, private events, and special promotions. Full technical support and operator assistance available.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
