@@ -1,6 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
+import AISoftware from "@/components/sections/AISoftware";
 import Portfolio from "@/components/sections/Portfolio";
 import Gallery from "@/components/sections/Gallery";
 import Installations from "@/components/sections/Installations";
@@ -16,6 +17,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Services />
+      <AISoftware />
       <Portfolio />
       <Gallery />
       <Installations />
@@ -27,3 +29,4 @@ export default function Home() {
     </div>
   );
 }
+
