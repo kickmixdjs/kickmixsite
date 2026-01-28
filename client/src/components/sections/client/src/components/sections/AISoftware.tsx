@@ -57,38 +57,81 @@ export default function AISoftware() {
   return (
     <section id="ai-software" className="py-32 bg-secondary/5 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+      
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mb-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-5xl md:text-6xl font-black mb-6 uppercase tracking-tighter">
               AI & CUSTOM <span className="text-primary">SOFTWARE SOLUTIONS</span>
             </h2>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl">
               Beyond our standard offerings, K.M. Productions provides a full-stack engineering team dedicated to bespoke builds. 
+              Whether it’s custom AI integration for high-stakes events or scalable software for business infrastructure, we code it all.
             </p>
           </motion.div>
         </div>
+
         <div className="grid md:grid-cols-3 gap-8 mb-32">
           {pillars.map((pillar, index) => (
-            <div key={index} className="p-8 rounded-lg border border-border/50 bg-background/50 backdrop-blur-sm hover:border-primary/50 transition-colors group">
-              <pillar.icon className="w-6 h-6 text-primary mb-6" />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="p-8 rounded-lg border border-border/50 bg-background/50 backdrop-blur-sm hover:border-primary/50 transition-colors group"
+            >
+              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                <pillar.icon className="w-6 h-6 text-primary" />
+              </div>
               <h3 className="text-xl font-black mb-4 text-white uppercase tracking-wider">{pillar.title}</h3>
-              <p className="text-slate-400 leading-relaxed">{pillar.description}</p>
-            </div>
+              <p className="text-slate-400 leading-relaxed">
+                {pillar.description}
+              </p>
+            </motion.div>
           ))}
         </div>
+
         <div className="mt-32">
-          <h3 className="text-3xl md:text-4xl font-black mb-16 uppercase tracking-tighter">
-            SIGNATURE <span className="text-primary">AI EXPERIENCES</span>
-          </h3>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h3 className="text-3xl md:text-4xl font-black mb-4 uppercase tracking-tighter">
+              SIGNATURE <span className="text-primary">AI EXPERIENCES</span>
+            </h3>
+            <p className="text-lg text-slate-400 max-w-2xl">
+              Proprietary high-tech activations that blend advanced artificial intelligence with physical event environments.
+            </p>
+          </motion.div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {signatureExperiences.map((exp, index) => (
-              <div key={index} className="p-8 rounded-lg border border-border/50 bg-secondary/10 hover:bg-secondary/20 transition-all duration-300 group flex flex-col h-full">
-                <exp.icon className="w-6 h-6 text-primary mb-6" />
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="p-8 rounded-lg border border-border/50 bg-secondary/10 hover:bg-secondary/20 transition-all duration-300 group flex flex-col h-full"
+              >
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                  <exp.icon className="w-6 h-6 text-primary" />
+                </div>
                 <h4 className="text-lg font-black mb-1 text-white uppercase tracking-wider">{exp.title}</h4>
-                {'subtitle' in exp && <p className="text-primary text-xs font-bold mb-3 uppercase tracking-widest">{exp.subtitle}</p>}
-                <p className="text-slate-400 text-sm leading-relaxed">{exp.description}</p>
-              </div>
+                {'subtitle' in exp && (
+                  <p className="text-primary text-xs font-bold mb-3 uppercase tracking-widest">{exp.subtitle}</p>
+                )}
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  {exp.description}
+                </p>
+              </motion.div>
             ))}
           </div>
         </div>
